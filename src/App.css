@@ -42,8 +42,8 @@
 @media (prefers-color-scheme: dark) {
   .gradient-custom {
     background: #6e683f;
-    background: -webkit-linear-gradient(to right, rgba(110,104,63,0.5), rgba(6,71,19,0.5));
-    background: linear-gradient(to right, rgba(110,104,63,0.5), rgba(6,71,19,0.5));
+    background: -webkit-linear-gradient(to right, rgba(49, 47, 30, 0.5), rgba(3, 36, 9, 0.5));
+    background: linear-gradient(to right, rgba(49, 47, 30, 0.5), rgba(3, 36, 9, 0.5));
   }
 }
 
@@ -51,7 +51,7 @@
 @media (prefers-color-scheme: light) {
   .gradient-custom {
     background: #37ecba;
-    background: -webkit-linear-gradient(to right, rgba(55,236,186,0.5), rgba(208,202,134,0.5));
-    background: linear-gradient(to right, rgba(55,236,186,0.5), rgba(208,202,134,0.5));
+    background: -webkit-linear-gradient(to right, rgba(67, 168, 47, 0.822), rgba(173, 164, 63, 0.781));
+    background: linear-gradient(to right, rgba(67, 168, 47, 0.822), rgba(173, 164, 63, 0.781));
   }
 }
