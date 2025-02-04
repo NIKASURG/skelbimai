@@ -10,28 +10,19 @@ function Header() {
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
-          <li><a href="#" class="nav-link px-2 link-body-emphasis">Inventory</a></li>
-          <li><a href="#" class="nav-link px-2 link-body-emphasis">Customers</a></li>
-          <li><a href="#" class="nav-link px-2 link-body-emphasis">Products</a></li>
+          <li><a href="/" class="nav-link px-2 link-secondary">Skelbimai</a></li>
+          <li><a href="/kurtiSkelbima" class="nav-link px-2 link-body-emphasis">Kelti skelbimą</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Mano skelbimai</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Produktai</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search"></input>
+          <input type="search" class="form-control" placeholder="Paieška..." aria-label="Paieška"></input>
         </form>
 
-        <div class="dropdown text-end">
-          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"></img>
-          </a>
-          <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider"></hr></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
-        </div>
+        <button type="button" class="btn btn-outline-primary me-2" onClick={() => window.location.href = '/login'} >Prisijungti</button>
+       
+        <button type="button" class="btn btn-primary"  onClick={() => window.location.href = '/register'}>Registruotis</button>
       </div>
     </div>
   </header>
