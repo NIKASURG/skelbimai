@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './login.css';
+import googleLogin from './googleLogin';
+
 function Login() {
     return (
         <main className="form-signin w-100 m-auto border rounded-3 bg-body-tertiary shadow">
@@ -27,7 +29,7 @@ function Login() {
                 <p>Arba</p>
 
                 <center>
-                    <a href="#" type="button" className="login-with-google-btn bg-body-tertiary text-light-emphasis shadow-sm">Prisijungti su Google</a>
+                    <a href="#" type="button" className="login-with-google-btn bg-body-tertiary text-light-emphasis shadow-sm" onClick={googleLogin}>Prisijungti su Google</a>
                 </center>
             </form>
         </main>
