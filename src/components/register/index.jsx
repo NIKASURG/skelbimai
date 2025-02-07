@@ -19,10 +19,31 @@ function Register() {
         // Or you can work with it as a plain object:
         const formJson = Object.fromEntries(formData.entries());
         if (!formJson.vardas || formJson.vardas.trim() === "") {
-          // alert("Prašome įvesti savo vardą!");
           const alert = document.createElement('div');
-          alert.className = 'alert alert-danger';
+          alert.className = 'alert alert-danger position-absolute top-0 start-50 translate-middle-x w-100';
           alert.innerHTML = "Prašome įvesti savo vardą!";
+          document.body.appendChild(alert);
+          setTimeout(() => {
+            alert.remove();
+          }, 3000);
+          return;
+        }
+
+        if (!formJson.email || formJson.email.trim() === "") {
+          const alert = document.createElement('div');
+          alert.className = 'alert alert-danger position-absolute top-0 start-50 translate-middle-x w-100';
+          alert.innerHTML = "Prašome įvesti savo el. pašto adresą!";
+          document.body.appendChild(alert);
+          setTimeout(() => {
+            alert.remove();
+          }, 3000);
+          return;
+        }
+
+        if (!formJson.slaptazodis || formJson.slaptazodis.trim() === "") {
+          const alert = document.createElement('div');
+          alert.className = 'alert alert-danger position-absolute top-0 start-50 translate-middle-x w-100';
+          alert.innerHTML = "Prašome įvesti savo slaptažodį!";
           document.body.appendChild(alert);
           setTimeout(() => {
             alert.remove();
@@ -40,14 +61,14 @@ function Register() {
             });
             // console.log("User registered:", userCredential.user);
           }).then((user) => {
-            window.location.href = '/home'
+            window.location.href = '/ '
     
     
           })
           .catch((error) => {
             console.error("Error registering user:", error.code, error.message);
             const alert = document.createElement('div');
-            alert.className = 'alert alert-danger';
+            alert.className = 'alert alert-danger position-absolute top-0 start-50 translate-middle-x w-100';
             const tekstas = error.code === "auth/weak-password" ? " Slaptažodi turi sudaryti bent  6 simboliai" : "Toks el. paštas jau užregistruotas";
            
             alert.innerHTML = tekstas;

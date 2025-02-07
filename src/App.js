@@ -15,7 +15,23 @@ import Home from './components/main/index.jsx';
 import AddSkelbima from './components/addreklama/index.jsx'; 
 import ManoSkelbimai from './components/manoSkelbimai/index.jsx';
 import { onAuthStateChanged } from "firebase/auth";
+// import { auth } from "./config";
+import { getStorage, ref, uploadBytesResumable } from "firebase/storage";
 
+const storage = getStorage();
+const storageRef = ref(storage, '../../public/logo512.png');
+
+// Upload the file and metadata
+const uploadTask = uploadBytesResumable(storageRef,  '../../public/logo512.png');
+
+// Pause the upload
+uploadTask.pause();
+
+// Resume the upload
+uploadTask.resume();
+
+// Cancel the upload
+uploadTask.cancel();
 const keliai = [
   {
     path: "/",
